@@ -1,0 +1,92 @@
+#logo {
+	height: 150px;
+	width: 100px;
+}
+
+body{
+	background-color: #e8f1f2;
+}
+
+.navbar {
+	background-color: #00a1d7;
+	color: #174580;
+}
+
+.navbar a{
+	text-decoration: none;
+}
+.video{
+	color: #174580;
+	font-size: 2.5rem;
+	text-decoration: none;
+}
+
+.container {
+	color: #174580;
+}
+
+.marketing .col-lg-4 {
+	margin-bottom: 1.5rem;
+	text-align: center;
+  }
+  
+  .marketing .col-lg-4 p {
+	margin-right: .75rem;
+	margin-left: .75rem;
+  }
+
+  .principal{
+	text-align: center;
+	color: #174580;
+}
+.principal h1{
+	margin: 24px 0 24px 0;
+}
+
+.produtos {
+	width: 940px;
+	padding: 50px 0;
+}
+
+.produtos label {
+	display: inline-block;
+	color: #174580;
+	text-align: center;
+	width: 20%;
+	vertical-align: top;
+	margin: 1.5%;
+	padding: 30px 20px;
+	box-sizing: border-box;
+	border: 2px solid #174580;
+	border-radius: 10px;
+	height: 200px;
+}
+
+.produtos label:hover {
+	border-color: #00a1d7;
+	box-shadow: #00a1d7 5px 5px;
+}
+
+.produtos label:active {
+	border-color: #00a1d7;	
+}
+
+.produtos label:hover h2 {
+	font-size: 26px;
+	color: #00a1d7;
+}
+
+.produtos h2 {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.produtos img{
+	height: 100px;
+	display: block;
+	
+}
+.produtos form{
+	vertical-align: bottom;
+	margin-bottom: 10px;
+}
