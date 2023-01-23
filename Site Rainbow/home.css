@@ -1,6 +1,6 @@
 #logo {
-	height: 150px;
-	width: 100px;
+	height: 20rem;
+	width: 20rem;
 }
 
 body{
@@ -105,14 +105,13 @@ body{
 	margin-bottom: 10px;
 }
 
+.certificados{
+	background-color: #174580;
+	text-align: center;
+	color: #e8f1f2;
+}
 
 footer{
 	background-color:#174580;
-
-}
-
-footer a:hover{
-	font-size: large;
-	background-color: #e8f1f2;
-	border-radius: 100px;
+	text-align: center;
 }
