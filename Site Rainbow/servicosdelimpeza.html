@@ -7,6 +7,7 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="modal.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -18,58 +19,418 @@
 				<span class="navbar-toggler-icon"></span>
 			  </button>
 			  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-				<ul class="navbar-nav text-uppercase align-items-center fs-5">
-				  <li class="nav-item">
-					<a class="nav-link" href="index.html">Home</a>
-				  </li>
-				  <li class="nav-item">
-					<a class="nav-link" href="servicosdelimpeza.html">Serviços de Descontaminação</a>
-				  </li>
-				  <li class="nav-item">
-					<a class="nav-link" href="assistencia.html" >Assistência Técnica</a>
-				  </li>
-				  <li class="nav-item">
-					<a class="nav-link" href="#" >Locação</a>
-				  </li>
-				  <li class="nav-item">
-					<a class="nav-link" href="#" >(61)99999-5809</a>
-				  </li>
-				</ul>
+			    <ul class="navbar-nav text-uppercase align-items-center fs-5">
+				    <li class="nav-item">
+					  <a class="nav-link" href="index.html">Home</a>
+				    </li>
+				    <li class="nav-item">
+					  <a class="nav-link" href="servicosdelimpeza.html">Serviços de Descontaminação</a>
+				    </li>
+				   <li class="nav-item">
+					  <a class="nav-link" href="assistencia.html" >Assistência Técnica</a>
+				    </li>
+				    <li class="nav-item">
+					  <a class="nav-link" href="#" >Locação</a>
+				    </li>
+				    <li class="nav-item">
+					  <a class="nav-link" href="#" >(61)99999-5809</a>
+				    </li>
+				  </ul>
 			  </div>
 			</div>
-		  </nav>
-		 
+		</nav>
 	</header>
     <main class="principal">
         <h1>Selecione os itens que deseja descontaminar</h1>
         <form action="post" class="d-flex flex-wrap">
-                <div  class="btn btn-light d-flex flex-column border rounded-4 justify-content-center align-items-center" style="width: 300px; height:300px"  id="sofa">
+          <div  class="btn btn-light d-flex flex-column border rounded-4 justify-content-center align-items-center" data-bs-toggle="modal" data-bs-target="#sofaModal" style="width: 300px; height:300px"  id="sofa">
+            <!-- Modal -->
+            <div class="modal fade" id="sofaModal" tabindex="-1" aria-labelledby="sofaModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="sofaModalLabel">SOFÁ</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                      <article class="m-5" id="buttons">
+                        <div class="tamanho m-5">
+                          <h5>Número de Pessoas Sentadas</h5>
+                          <div class="bd-example-snippet bd-code-snippet">
+                            <div class="bd-example">
+                              <button type="button" class="btn border-dark rounded-circle me-2">1</button>
+                              <button type="button" class="btn border-dark rounded-circle me-2">2</button>
+                              <button type="button" class="btn border-dark rounded-circle me-2">3</button>
+                              <button type="button" class="btn border-dark rounded-circle me-2">4</button>
+                              <button type="button" class="btn border-dark rounded-circle me-2">5</button>
+                            </div>
+                            <h5>Modelo</h5>
+                            <div class="bd-example-snippet bd-code-snippet ">
+                              <div class="bd-example">
+                                <button type="button" class="btn border-dark rounded-circle">Sofá Retrátil</button>
+                                <button type="button" class="btn border-dark rounded-circle">Sofá Comum</button>
+                                <button type="button" class="btn border-dark rounded-circle">Sofá de Canto</button>
+                                <button type="button" class="btn border-dark rounded-circle">Sofá com chaise</button>
+                                <button type="button" class="btn border-dark rounded-circle">Sofá Cama</button>
+                              </div>
+                              <h5>Serviços</h5>
+                              <fieldset class="mb-3">
+                                <div class="form-check">
+                                  <input type="radio" name="radios" class="form-check-input" id="exampleRadio1">
+                                  <label class="form-check-label" for="exampleRadio1">Descontaminação Profunda</label>
+                                </div>
+                                <div class="mb-3 form-check">
+                                  <input type="radio" name="radios" class="form-check-input" id="exampleRadio2">
+                                  <label class="form-check-label" for="exampleRadio2">Remoção de Manchas</label>
+                                </div>
+                              </fieldset>
+                            </div>
+                          </div>
+                        </div>  
+                      </article>  
+                    </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>  
                     <label for="sofa">Sofá</label>
                     <img src="img/icons8-sala-de-estar-100.png" class="img-fluid">
                     <input data-seleciona type="checkbox" name="sofa" id="" class="form-check-input">
-                </div>
-                <div  class="btn btn-light d-flex flex-column border rounded-4 justify-content-center align-items-center" style="width: 300px; height:300px"  id="sofa">
-                    <label for="sofa">Sofá</label>
-                    <img src="img/icons8-sala-de-estar-100.png" class="img-fluid">
-                    <input data-seleciona type="checkbox" name="sofa" id="" class="form-check-input">
-                </div>
-                <div  class="btn btn-light d-flex flex-column border rounded-4 justify-content-center align-items-center" style="width: 300px; height:300px"  id="sofa">
-                    <label for="sofa">Sofá</label>
-                    <img src="img/icons8-sala-de-estar-100.png" class="img-fluid">
-                    <input data-seleciona type="checkbox" name="sofa" id="" class="form-check-input">
-                </div>
-                <div  class="btn btn-light d-flex flex-column border rounded-4 justify-content-center align-items-center" style="width: 300px; height:300px"  id="sofa">
-                    <label for="sofa">Sofá</label>
-                    <img src="img/icons8-sala-de-estar-100.png" class="img-fluid">
-                    <input data-seleciona type="checkbox" name="sofa" id="" class="form-check-input">
-                </div>
-                <div  class="btn btn-light d-flex flex-column border rounded-4 justify-content-center align-items-center" style="width: 300px; height:300px"  id="sofa">
-                    <label for="sofa">Sofá</label>
-                    <img src="img/icons8-sala-de-estar-100.png" class="img-fluid">
-                    <input data-seleciona type="checkbox" name="sofa" id="" class="form-check-input">
-                </div>
+                  </div>
+                  <div  class="btn btn-light d-flex flex-column border rounded-4 justify-content-center align-items-center" data-bs-toggle="modal" data-bs-target="#camaModal" style="width: 300px; height:300px"  id="sofa">
+                    <!-- Modal -->
+                    <div class="modal fade" id="camaModal" tabindex="-1" aria-labelledby="camaModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="camaModalLabel">COLCHÃO</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                              <article class="m-5" id="buttons">
+                                <div class="tamanho m-5">
+                                  <h5>Tamanho</h5>
+                                  <div class="bd-example-snippet bd-code-snippet">
+                                    <div class="bd-example">
+                                      <button type="button" class="btn border-dark rounded-circle me-2">Solteiro</button>
+                                      <button type="button" class="btn border-dark rounded-circle me-2">Viúva</button>
+                                      <button type="button" class="btn border-dark rounded-circle me-2">Casal</button>
+                                      <button type="button" class="btn border-dark rounded-circle me-2">Queen</button>
+                                      <button type="button" class="btn border-dark rounded-circle me-2">King</button>
+                                      <button type="button" class="btn border-dark rounded-circle me-2">Super-King</button>
+                                    </div>
+                                    <div class="bd-example-snippet bd-code-snippet ">
+                                      <h5>Serviços</h5>
+                                      <fieldset class="mb-3">
+                                        <div class="form-check">
+                                          <input type="radio" name="radios" class="form-check-input" id="exampleRadio1">
+                                          <label class="form-check-label" for="exampleRadio1">Descontaminação Profunda</label>
+                                        </div>
+                                        <div class="mb-3 form-check">
+                                          <input type="radio" name="radios" class="form-check-input" id="exampleRadio2">
+                                          <label class="form-check-label" for="exampleRadio2">Remoção de Manchas</label>
+                                        </div>
+                                      </fieldset>
+                                    </div>
+                                  </div>
+                                </div>  
+                              </article>  
+                            </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>  
+                            <label for="colchao">Colchão</label>
+                            <img src="img/icons8-cama-100.png" class="img-fluid">
+                            <input data-seleciona type="checkbox" name="colchao" id="" class="form-check-input">
+                          </div>
+                          <div  class="btn btn-light d-flex flex-column border rounded-4 justify-content-center align-items-center" data-bs-toggle="modal" data-bs-target="#tapeteModal" style="width: 300px; height:300px"  id="carpete">
+                            <!-- Modal -->
+                            <div class="modal fade" id="tapeteModal" tabindex="-1" aria-labelledby="tapeteModalLabel" aria-hidden="true">
+                              <div class="modal-dialog">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="tapeteModalLabel">TAPETE</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                  </div>
+                                  <div class="modal-body">
+                                      <article class="m-5" id="buttons">
+                                        <div class="tamanho m-5">
+                                          <h5>Tamanho</h5>
+                                          <div class="bd-example-snippet bd-code-snippet">
+                                            <div class="bd-example">
+                                              <input class="btn border-dark m-2" placeholder="largura (m)">
+                                              <input class="btn border-dark m-2" placeholder="comprimento (m)">
+                                            </div>
+                                            <div class="bd-example-snippet bd-code-snippet ">
+                                              <h5>Serviços</h5>
+                                              <fieldset class="mb-3">
+                                                <div class="form-check">
+                                                  
+                                                  <input type="radio" name="radios" class="form-check-input" id="exampleRadio1">
+                                                  <label class="form-check-label" for="exampleRadio1">Descontaminação Profunda</label>
+                                                </div>
+                                                <div class="mb-3 form-check">
+                                                  <input type="radio" name="radios" class="form-check-input" id="exampleRadio2">
+                                                  <label class="form-check-label" for="exampleRadio2">Remoção de Manchas</label>
+                                                </div>
+                                              </fieldset>
+                                            </div>
+                                          </div>
+                                        </div>  
+                                      </article>  
+                                    </div>
+                                          <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>  
+                                    <label for="tapete">Tapete</label>
+                                    <img src="img/icons8-rug-100.png" class="img-fluid">
+                                  </div>
+                                  <div  class="btn btn-light d-flex flex-column border rounded-4 justify-content-center align-items-center" data-bs-toggle="modal" data-bs-target="#carpeteModal" style="width: 300px; height:300px"  id="sofa">
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="carpeteModal" tabindex="-1" aria-labelledby="carpeteModalLabel" aria-hidden="true">
+                                      <div class="modal-dialog">
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="carpeteModalLabel">CARPETE</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                          </div>
+                                          <div class="modal-body">
+                                              <article class="m-5" id="buttons">
+                                                <div class="tamanho m-5">
+                                                  <h5>ÁREA</h5>
+                                                  <div class="bd-example-snippet bd-code-snippet">
+                                                    <div class="bd-example">
+                                                      <input class="btn border-dark m-2" placeholder="área em m²">
+                                                    </div>
+                                                    <div class="bd-example-snippet bd-code-snippet ">
+                                                      <h5>Serviços</h5>
+                                                      <fieldset class="mb-3">
+                                                        <div class="form-check">
+                                                          
+                                                          <input type="radio" name="radios" class="form-check-input" id="exampleRadio1">
+                                                          <label class="form-check-label" for="exampleRadio1">Descontaminação Profunda</label>
+                                                        </div>
+                                                        <div class="mb-3 form-check">
+                                                          <input type="radio" name="radios" class="form-check-input" id="exampleRadio2">
+                                                          <label class="form-check-label" for="exampleRadio2">Remoção de Manchas</label>
+                                                        </div>
+                                                      </fieldset>
+                                                    </div>
+                                                  </div>
+                                                </div>  
+                                              </article>  
+                                            </div>
+                                                  <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>  
+                                            <label for="carpete">Carpete</label>
+                                            <img src="img/icons8-tapete-100.png" class="img-fluid">
+                                          </div>
+                                          <div  class="btn btn-light d-flex flex-column border rounded-4 justify-content-center align-items-center" data-bs-toggle="modal" data-bs-target="#carrinhoModal" style="width: 300px; height:300px"  id="sofa">
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="carrinhoModal" tabindex="-1" aria-labelledby="carrinhoModalLabel" aria-hidden="true">
+                                              <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                  <div class="modal-header">
+                                                    <h1 class="modal-title fs-5" id="carrinhoModalLabel">CARRINHO-DE-BEBÊ</h1>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                  </div>
+                                                  <div class="modal-body">
+                                                      <article class="m-5" id="buttons">
+                                                        <div class="tamanho m-5">
+                                                          <div class="bd-example-snippet bd-code-snippet">
+                                                            <div class="bd-example-snippet bd-code-snippet ">
+                                                              <h5>Serviços</h5>
+                                                              <fieldset class="mb-3">
+                                                                <div class="form-check">
+                                                                  
+                                                                  <input type="radio" name="radios" class="form-check-input" id="exampleRadio1">
+                                                                  <label class="form-check-label" for="exampleRadio1">Descontaminação Profunda</label>
+                                                                </div>
+                                                                <div class="mb-3 form-check">
+                                                                  <input type="radio" name="radios" class="form-check-input" id="exampleRadio2">
+                                                                  <label class="form-check-label" for="exampleRadio2">Remoção de Manchas</label>
+                                                                </div>
+                                                              </fieldset>
+                                                            </div>
+                                                          </div>
+                                                        </div>  
+                                                      </article>  
+                                                    </div>
+                                                          <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </div>  
+                                                    <label for="carrinho">Carrinho-de-bebê</label>
+                                                    <img src="img/icons8-carrinho-de-bebê-100.png" class="img-fluid">
+                                                  </div>
+                                                  <div  class="btn btn-light d-flex flex-column border rounded-4 justify-content-center align-items-center" data-bs-toggle="modal" data-bs-target="#poltronaModal" style="width: 300px; height:300px"  id="sofa">
+                                                    <!-- Modal -->
+                                                    <div class="modal fade" id="poltronaModal" tabindex="-1" aria-labelledby="poltronaModalLabel" aria-hidden="true">
+                                                      <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                          <div class="modal-header">
+                                                            <h1 class="modal-title fs-5" id="poltronaModalLabel">POLTRONA</h1>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                          </div>
+                                                          <div class="modal-body">
+                                                              <article class="m-5" id="buttons">
+                                                                <div class="tamanho m-5">
+                                                                  <div class="bd-example-snippet bd-code-snippet">
+                                                                    <div class="bd-example-snippet bd-code-snippet ">
+                                                                      <h5>Serviços</h5>
+                                                                      <fieldset class="mb-3">
+                                                                        <div class="form-check">
+                                                                          
+                                                                          <input type="radio" name="radios" class="form-check-input" id="exampleRadio1">
+                                                                          <label class="form-check-label" for="exampleRadio1">Descontaminação Profunda</label>
+                                                                        </div>
+                                                                        <div class="mb-3 form-check">
+                                                                          <input type="radio" name="radios" class="form-check-input" id="exampleRadio2">
+                                                                          <label class="form-check-label" for="exampleRadio2">Remoção de Manchas</label>
+                                                                        </div>
+                                                                      </fieldset>
+                                                                    </div>
+                                                                  </div>
+                                                                </div>  
+                                                              </article>  
+                                                            </div>
+                                                                  <div class="modal-footer">
+                                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                            </div>  
+                                                            <label for="poltrona">Poltrona</label>
+                                                            <img src="img/icons8-poltrona-100.png" class="img-fluid">
+                                                          </div>
+                                                          <div  class="btn btn-light d-flex flex-column border rounded-4 justify-content-center align-items-center" data-bs-toggle="modal" data-bs-target="#livrosModal" style="width: 300px; height:300px"  id="sofa">
+                                                            <!-- Modal -->
+                                                            <div class="modal fade" id="livrosModal" tabindex="-1" aria-labelledby="livrosModalLabel" aria-hidden="true">
+                                                              <div class="modal-dialog">
+                                                                <div class="modal-content">
+                                                                  <div class="modal-header">
+                                                                    <h1 class="modal-title fs-5" id="livrosModalLabel">ESTANTE DE LIVROS</h1>
+                                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                                  </div>
+                                                                  <div class="modal-body">
+                                                                    <article class="m-5" id="buttons">
+                                                                      <div class="tamanho m-5">
+                                                                        <h5>Tamanho</h5>
+                                                                        <div class="bd-example-snippet bd-code-snippet">
+                                                                          <div class="bd-example">
+                                                                            <input class="btn border-dark m-2" placeholder="largura (m)">
+                                                                            <input class="btn border-dark m-2" placeholder="comprimento (m)">
+                                                                          </div>
+                                                                        </div>
+                                                                      </div>
+                                                                    </article>
+                                                                    </div>
+                                                                          <div class="modal-footer">
+                                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                                                          </div>
+                                                                        </div>
+                                                                      </div>
+                                                                    </div>  
+                                                                    <label for="livros">Livros</label>
+                                                                    <img src="img/icons8-livros-100.png" class="img-fluid">
+                                                                  </div>
+                                                                  <div  class="btn btn-light d-flex flex-column border rounded-4 justify-content-center align-items-center" data-bs-toggle="modal" data-bs-target="#bercoModal" style="width: 300px; height:300px"  id="sofa">
+                                                            <!-- Modal -->
+                                                            <div class="modal fade" id="bercoModal" tabindex="-1" aria-labelledby="bercoModalLabel" aria-hidden="true">
+                                                              <div class="modal-dialog">
+                                                                <div class="modal-content">
+                                                                  <div class="modal-header">
+                                                                    <h1 class="modal-title fs-5" id="bercoModalLabel">BERÇO</h1>
+                                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                                  </div>
+                                                                  <div class="modal-body">
+                                                                    <article class="m-5" id="buttons">
+                                                                      <div class="tamanho m-5">
+                                                                        <div class="bd-example-snippet bd-code-snippet">
+                                                                          <h5>Serviços</h5>
+                                                                      <fieldset class="mb-3">
+                                                                        <div class="form-check">
+                                                                          
+                                                                          <input type="radio" name="radios" class="form-check-input" id="exampleRadio1">
+                                                                          <label class="form-check-label" for="exampleRadio1">Descontaminação Profunda</label>
+                                                                        </div>
+                                                                        <div class="mb-3 form-check">
+                                                                          <input type="radio" name="radios" class="form-check-input" id="exampleRadio2">
+                                                                          <label class="form-check-label" for="exampleRadio2">Remoção de Manchas</label>
+                                                                        </div>
+                                                                      </fieldset>
+                                                                          <div class="bd-example">
+                                                                          </div>
+                                                                        </div>
+                                                                      </div>
+                                                                    </article>
+                                                                    </div>
+                                                                          <div class="modal-footer">
+                                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                                                          </div>
+                                                                        </div>
+                                                                      </div>
+                                                                    </div>  
+                                                                    <label for="livros">Berço</label>
+                                                                    <img src="img/icons8-berço-100.png" class="img-fluid">
+                                                                  </div>
+                                                                  <div  class="btn btn-light d-flex flex-column border rounded-4 justify-content-center align-items-center" data-bs-toggle="modal" data-bs-target="#arCondicionadoModal" style="width: 300px; height:300px"  id="sofa">
+                                                                    <!-- Modal -->
+                                                                    <div class="modal fade" id="arCondicionadoModal" tabindex="-1" aria-labelledby="arCondicionadoModalLabel" aria-hidden="true">
+                                                                      <div class="modal-dialog">
+                                                                        <div class="modal-content">
+                                                                          <div class="modal-header">
+                                                                            <h1 class="modal-title fs-5" id="arCondicionadoModalLabel">AR-CONDICIONADO</h1>
+                                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                                          </div>
+                                                                          <div class="modal-body">
+                                                                            <article class="m-5" id="buttons">
+                                                                              <div class="tamanho m-5">
+                                                                                <div class="bd-example-snippet bd-code-snippet">
+                                                                                  <h5>Serviços</h5>
+                                                                              <fieldset class="mb-3">
+                                                                                <div class="form-check">
+                                                                                  
+                                                                                  <input type="radio" name="radios" class="form-check-input" id="exampleRadio1">
+                                                                                  <label class="form-check-label" for="exampleRadio1">Descontaminação Profunda</label>
+                                                                                </div>
+                                                                                <div class="mb-3 form-check">
+                                                                            </article>
+                                                                            </div>
+                                                                                  <div class="modal-footer">
+                                                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                                                                  </div>
+                                                                                </div>
+                                                                              </div>
+                                                                            </div>  
+                                                                            <label for="arCondicionado">Ar-Condicionado</label>
+                                                                            <img src="img/icons8-condicionador-de-ar-100.png" class="img-fluid">
+                                                                          </div>
         </form>
     </main>
     <script src="./servicosdelimpeza.js"></script>
-</body>
+  </body>
 </html>
