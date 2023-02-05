@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="modal.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 </head>
 <body>
   <header>
@@ -58,10 +59,10 @@
                           <h5>Número de Pessoas Sentadas</h5>
                           <div class="bd-example-snippet bd-code-snippet">
                             <div class="bd-example mb-5">
-                              <button type="button" class="btn border-dark rounded-circle me-2" data-size>2</button>
-                              <button type="button" class="btn border-dark rounded-circle me-2" data-size>3</button>
-                              <button type="button" class="btn border-dark rounded-circle me-2" data-size>4</button>
-                              <button type="button" class="btn border-dark rounded-circle me-2" data-size>5</button>
+                              <button type="button" class="btn border-dark rounded-circle me-2" data-size value="1">2</button>
+                              <button type="button" class="btn border-dark rounded-circle me-2" data-size value="1.5">3</button>
+                              <button type="button" class="btn border-dark rounded-circle me-2" data-size value="2">4</button>
+                              <button type="button" class="btn border-dark rounded-circle me-2" data-size value="3">5</button>
                             </div>
                             <h5>Modelo</h5>
                             <div class="bd-example-snippet bd-code-snippet ">
@@ -75,25 +76,24 @@
                               <h5>Serviços</h5>
                               <fieldset class="mb-3">
                                 <div class="form-check">
-                                  <input type="radio" name="radios" class="form-check-input" id="exampleRadio1">
-                                  <label class="form-check-label" for="exampleRadio1">Descontaminação Profunda</label>
+                                  <input type="checkbox" name="radios" class="form-check-input" id="descontaminacao">
+                                  <label class="form-check-label" for="descontaminacao">Descontaminação Profunda</label>
                                 </div>
                                 <div class="mb-3 form-check">
-                                  <input type="radio" name="radios" class="form-check-input" id="exampleRadio2">
-                                  <label class="form-check-label" for="exampleRadio2">Remoção de Manchas</label>
+                                  <input type="checkbox" name="radios" class="form-check-input" id="lavacao">
+                                  <label class="form-check-label" for="lavacao">Remoção de Manchas</label>
                                 </div>
                               </fieldset>
-                              <section class="equipamentos">
-                                <form action="" class="montador">
-                                    <div class="box montador-conteudo">
-                                        <div class="peca">
-                                            <label for="" class="peca-titulo">Pacote</label>
-                                            <div class="controle">
-                                                <input type="text" class="controle-contador" value="00" data-pack>
-                                            </div>
+                              <section class="valor">
+                                <form action="" >
+                                    <div class="pacote">
+                                          <label for="">Pacote</label>
+                                          <div class="contador">
+                                            <input type="text" class="controle-contador" value="00" data-pack>
+                                          </div>
+                                      </div>
                                 </form>
                             </section>
-                            </div>
                           </div>
                         </div>  
                       </article>  
@@ -108,7 +108,7 @@
                     <label for="sofa">Sofá</label>
                     <img src="img/icons8-sala-de-estar-100.png" class="img-fluid">
                   </div>
-                  <div  class="btn btn-light d-flex flex-column border rounded-4 justify-content-center align-items-center" data-bs-toggle="modal" data-bs-target="#camaModal" style="width: 300px; height:300px"  id="sofa">
+                  <div  class="btn btn-light d-flex flex-column border rounded-4 justify-content-center align-items-center" data-bs-toggle="modal" data-bs-target="#camaModal" style="width: 300px; height:300px" id="colchao">
                     <!-- Modal -->
                     <div class="modal" id="camaModal" tabindex="-1" aria-labelledby="camaModalLabel" aria-hidden="true">
                       <div class="modal-dialog">
@@ -157,7 +157,7 @@
                             <label for="colchao">Colchão</label>
                             <img src="img/icons8-cama-100.png" class="img-fluid">
                           </div>
-                          <div  class="btn btn-light d-flex flex-column border rounded-4 justify-content-center align-items-center" data-bs-toggle="modal" data-bs-target="#tapeteModal" style="width: 300px; height:300px"  id="carpete">
+                          <div  class="btn btn-light d-flex flex-column border rounded-4 justify-content-center align-items-center" data-bs-toggle="modal" data-bs-target="#tapeteModal" style="width: 300px; height:300px"  id="tapete">
                             <!-- Modal -->
                             <div class="modal" id="tapeteModal" tabindex="-1" aria-labelledby="tapeteModalLabel" aria-hidden="true">
                               <div class="modal-dialog">
@@ -204,7 +204,7 @@
                                     <label for="tapete">Tapete</label>
                                     <img src="img/icons8-rug-100.png" class="img-fluid">
                                   </div>
-                                  <div  class="btn btn-light d-flex flex-column border rounded-4 justify-content-center align-items-center" data-bs-toggle="modal" data-bs-target="#carpeteModal" style="width: 300px; height:300px"  id="sofa">
+                                  <div  class="btn btn-light d-flex flex-column border rounded-4 justify-content-center align-items-center" data-bs-toggle="modal" data-bs-target="#carpeteModal" style="width: 300px; height:300px"  id="carpete">
                                     <!-- Modal -->
                                     <div class="modal" id="carpeteModal" tabindex="-1" aria-labelledby="carpeteModalLabel" aria-hidden="true">
                                       <div class="modal-dialog">
@@ -249,7 +249,7 @@
                                             <label for="carpete">Carpete</label>
                                             <img src="img/icons8-tapete-100.png" class="img-fluid">
                                           </div>
-                                          <div  class="btn btn-light d-flex flex-column border rounded-4 justify-content-center align-items-center" data-bs-toggle="modal" data-bs-target="#carrinhoModal" style="width: 300px; height:300px"  id="sofa">
+                                          <div  class="btn btn-light d-flex flex-column border rounded-4 justify-content-center align-items-center" data-bs-toggle="modal" data-bs-target="#carrinhoModal" style="width: 300px; height:300px"  id="carrinho">
                                             <!-- Modal -->
                                             <div class="modal" id="carrinhoModal" tabindex="-1" aria-labelledby="carrinhoModalLabel" aria-hidden="true">
                                               <div class="modal-dialog">
@@ -290,7 +290,7 @@
                                                     <label for="carrinho">Carrinho-de-bebê</label>
                                                     <img src="img/icons8-carrinho-de-bebê-100.png" class="img-fluid">
                                                   </div>
-                                                  <div  class="btn btn-light d-flex flex-column border rounded-4 justify-content-center align-items-center" data-bs-toggle="modal" data-bs-target="#poltronaModal" style="width: 300px; height:300px"  id="sofa">
+                                                  <div  class="btn btn-light d-flex flex-column border rounded-4 justify-content-center align-items-center" data-bs-toggle="modal" data-bs-target="#poltronaModal" style="width: 300px; height:300px"  id="poltrona">
                                                     <!-- Modal -->
                                                     <div class="modal" id="poltronaModal" tabindex="-1" aria-labelledby="poltronaModalLabel" aria-hidden="true">
                                                       <div class="modal-dialog">
@@ -331,7 +331,7 @@
                                                             <label for="poltrona">Poltrona</label>
                                                             <img src="img/icons8-poltrona-100.png" class="img-fluid">
                                                           </div>
-                                                          <div  class="btn btn-light d-flex flex-column border rounded-4 justify-content-center align-items-center" data-bs-toggle="modal" data-bs-target="#livrosModal" style="width: 300px; height:300px"  id="sofa">
+                                                          <div  class="btn btn-light d-flex flex-column border rounded-4 justify-content-center align-items-center" data-bs-toggle="modal" data-bs-target="#livrosModal" style="width: 300px; height:300px"  id="livros">
                                                             <!-- Modal -->
                                                             <div class="modal" id="livrosModal" tabindex="-1" aria-labelledby="livrosModalLabel" aria-hidden="true">
                                                               <div class="modal-dialog">
@@ -363,7 +363,7 @@
                                                                     <label for="livros">Livros</label>
                                                                     <img src="img/icons8-livros-100.png" class="img-fluid">
                                                                   </div>
-                                                                  <div  class="btn btn-light d-flex flex-column border rounded-4 justify-content-center align-items-center" data-bs-toggle="modal" data-bs-target="#bercoModal" style="width: 300px; height:300px"  id="sofa">
+                                                                  <div  class="btn btn-light d-flex flex-column border rounded-4 justify-content-center align-items-center" data-bs-toggle="modal" data-bs-target="#bercoModal" style="width: 300px; height:300px"  id="berco">
                                                             <!-- Modal -->
                                                             <div class="modal" id="bercoModal" tabindex="-1" aria-labelledby="bercoModalLabel" aria-hidden="true">
                                                               <div class="modal-dialog">
@@ -404,7 +404,7 @@
                                                                     <label for="livros">Berço</label>
                                                                     <img src="img/icons8-berço-100.png" class="img-fluid">
                                                                   </div>
-                                                                  <div  class="btn btn-light d-flex flex-column border rounded-4 justify-content-center align-items-center" data-bs-toggle="modal" data-bs-target="#arCondicionadoModal" style="width: 300px; height:300px"  id="sofa">
+                                                                  <div  class="btn btn-light d-flex flex-column border rounded-4 justify-content-center align-items-center" data-bs-toggle="modal" data-bs-target="#arCondicionadoModal" style="width: 300px; height:300px"  id="arCondicionado">
                                                                     <!-- Modal -->
                                                                     <div class="modal" id="arCondicionadoModal" tabindex="-1" aria-labelledby="arCondicionadoModalLabel" aria-hidden="true">
                                                                       <div class="modal-dialog">
