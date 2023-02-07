@@ -1,0 +1,34 @@
+#logo {
+	height: 20rem;
+	width: 20rem;
+}
+
+body{
+	background-color: #e8f1f2 !important;
+}
+
+.navbar {
+	background-color: #00a1d7;
+	color: #174580;
+}
+
+.navbar a{
+	font-weight: bold;
+	color: #00a1d7;
+	border: 2px white;
+	border-radius: 100px;
+	background-color: #e8f1f2;
+	margin: 5px;
+}
+
+.navbar a:hover{
+	color: #174580;
+	font-weight: bolder;
+	font-size: larger;
+}
+
+.containerServicos {
+	background-color: #e8f1f2;
+	color: #174580;
+	text-align: center;
+}
