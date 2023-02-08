@@ -1,6 +1,6 @@
 #logo {
-	height: 20rem;
-	width: 20rem;
+	height: 10rem;
+	width: 10rem;
 }
 
 body{
@@ -31,6 +31,11 @@ body{
 	background-color: #e8f1f2;
 	color: #174580;
 	text-align: center;
+}
+
+.size-selected2{
+	background-color: #174580 !important;
+	color: #e8f1f2 !important;
 }
 
 footer{
