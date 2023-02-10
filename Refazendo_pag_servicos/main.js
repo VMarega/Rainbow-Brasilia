@@ -5,7 +5,6 @@ elemento.addEventListener("click", (e)=>{
     if(e.target.classList.contains("size-selected")){
     e.target.classList.remove("size-selected");
     e.target.classList.add("size-selected2");
-    this.siblings(".size-selected").remove("size-selected2");
 } else {
     e.target.classList.remove("size-selected2");
     e.target.classList.add("size-selected")
