@@ -89,16 +89,16 @@
                                     <h5 class="mb-5">Nº DE PESSOAS SENTADAS</h5>
                                     <div class="mb-5">
                                         <input type="radio" class="btn-check" name="options" id="option1"
-                                        autocomplete="off">
+                                            autocomplete="off">
                                         <label class="btn rounded-circle lugares-sofa" for="option1">2</label>
                                         <input type="radio" class="btn-check" name="options" id="option2"
-                                        autocomplete="off">
+                                            autocomplete="off">
                                         <label class="btn rounded-circle lugares-sofa" for="option2">3</label>
                                         <input type="radio" class="btn-check" name="options" id="option3"
-                                        autocomplete="off">
+                                            autocomplete="off">
                                         <label class="btn rounded-circle lugares-sofa" for="option3">4</label>
                                         <input type="radio" class="btn-check" name="options" id="option4"
-                                        autocomplete="off">
+                                            autocomplete="off">
                                         <label class="btn rounded-circle lugares-sofa" for="option4">5</label>
                                     </div>
                                 </div>
@@ -163,15 +163,21 @@
                         <div class="modal-body">
                             <article class="m-5" id="buttons">
                                 <div class="tamanhosColchao">
-                                    <h5>TAMANHO</h5>
-                                    <div class="bd-example-snippet bd-code-snippet ">
-                                        <div class="bd-example mt-5 mb-5">
-                                            <button type="button" class="btn border-dark m-2">SOLTEIRO</button>
-                                            <button type="button" class="btn border-dark m-2">CASAL</button>
-                                            <button type="button" class="btn border-dark m-2">QUEEN</button>
-                                            <button type="button" class="btn border-dark m-2">KING</button>
-                                            <button type="button" class="btn border-dark m-2">SUPERKING</button>
-                                        </div>
+                                    <h5 class="mb-5">TAMANHO</h5>
+                                    <div class="mb-5">
+                                        <input type="radio" class="btn-check" name="options" id="optionCama1"
+                                            autocomplete="off">
+                                        <label class="btn rounded-circle lugares-sofa"
+                                            for="optionCama1">Solteiro</label>
+                                        <input type="radio" class="btn-check" name="options" id="optionCama2"
+                                            autocomplete="off">
+                                        <label class="btn rounded-circle lugares-sofa" for="optionCama2">Casal</label>
+                                        <input type="radio" class="btn-check" name="options" id="optionCama3"
+                                            autocomplete="off">
+                                        <label class="btn rounded-circle lugares-sofa" for="optionCama3">Queen</label>
+                                        <input type="radio" class="btn-check" name="options" id="optionCama4"
+                                            autocomplete="off">
+                                        <label class="btn rounded-circle lugares-sofa" for="optionCama4">King</label>
                                     </div>
                                 </div>
                                 <div>
@@ -385,6 +391,10 @@
                                             <input type="checkbox" name="radios" class="form-check-input" id="lavacao">
                                             <label class="form-check-label" for="lavacao">Remoção de Manchas</label>
                                         </div>
+                                        <div>
+                                            <label for="quantidadePolt">Quantidade</label>
+                                            <input type="number" name="quantidadePolt">
+                                        </div>
                                     </fieldset>
                                 </div>
                             </article>
@@ -515,11 +525,15 @@
                                 <div>
                                     <h5>SERVIÇOS</h5>
                                     <fieldset class="mb-3">
-                                        <div class="form-check">
+                                        <div class="form-check mb-3">
                                             <input type="checkbox" name="radios" class="form-check-input"
                                                 id="descontaminacao" checked>
                                             <label class="form-check-label" for="descontaminacao">Descontaminação
                                                 Profunda</label>
+                                        </div>
+                                        <div>
+                                            <label for="quantidadeAR">Quantidade</label>
+                                            <input type="number" name="quantidadeAR">
                                         </div>
                                     </fieldset>
                                 </div>
