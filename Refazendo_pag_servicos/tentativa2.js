@@ -57,22 +57,23 @@ function montaPacoteHigProfunda(tamanho){
     }
 }*/
 tamanhoSofa.forEach((elemento) => {
-    elemento.addEventListener("change", adicionar.addEventListener("click", (evento)=>{
-        if(lavagem.checked){
-            verificaTamanhoSofaLavagem(evento.target.value);
-            formItem.reset();
+    elemento.addEventListener("change", (evento)=>{
+        adicionar.addEventListener("click", (e)=>{
+            if(lavagem.checked){
+                verificaTamanhoSofaLavagem(evento.target.value);
+                formItem.reset();
 }
-            // quero que feche o modal
-            // quero que inclua o item adicionado na lista
-        else if (higProfunda.checked){
-            montaPacoteHigProfunda(evento.target.value);
-        } else {
-            alert(`Selecione o serviço desejado para este item`)
-        }
-    }))
-    formItem.reset();
+                // quero que feche o modal
+                // quero que inclua o item adicionado na lista
+            else if (higProfunda.checked){
+                montaPacoteHigProfunda(evento.target.value);
+            } else {
+                alert(`Selecione o serviço desejado para este item`)
+            }
+        })
+        formItem.reset();
+    })
 })
-    
 
 
 
