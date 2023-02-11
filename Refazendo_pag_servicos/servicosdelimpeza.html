@@ -84,58 +84,60 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <article class="m-5" id="buttons">
-                                <div class="tamanhoSofa">
-                                    <h5 class="mb-5">Nº DE PESSOAS SENTADAS</h5>
-                                    <div class="mb-5" id="sofa-size">
-                                        <input type="radio" class="btn-check" data-pessoas-sentadas name="options" id="option1" autocomplete="off" value="1">
-                                        <label class="btn rounded-circle lugares-sofa" for="option1">2</label>
-                                        <input type="radio" class="btn-check" data-pessoas-sentadas name="options" id="option2" autocomplete="off" value="1.5">
-                                        <label class="btn rounded-circle lugares-sofa" for="option2">3</label>
-                                        <input type="radio" class="btn-check" data-pessoas-sentadas name="options" id="option3" autocomplete="off" value="2">
-                                        <label class="btn rounded-circle lugares-sofa" for="option3">4</label>
-                                        <input type="radio" class="btn-check" data-pessoas-sentadas name="options" id="option4" autocomplete="off" value="3">
-                                        <label class="btn rounded-circle lugares-sofa" for="option4">5</label>
-                                    </div>
-                                </div>
-                                <div class="caracteristicasSofa">
-                                    <h5>CARACTERISTICAS</h5>
-                                    <div class="bd-example-snippet bd-code-snippet ">
-                                        <div class="bd-example mt-5 mb-5">
-                                            <button type="button" class="btn border-dark m-2 size-selected">Sofá
-                                                Retrátil</button>
-                                            <button type="button" class="btn border-dark m-2 size-selected">Sofá
-                                                Comum</button>
-                                            <button type="button" class="btn border-dark m-2 size-selected">Sofá de
-                                                Canto</button>
-                                            <button type="button" class="btn border-dark m-2 size-selected">Sofá com
-                                                chaise</button>
-                                            <button type="button" class="btn border-dark m-2 size-selected">Sofá
-                                                Cama</button>
+                            <form action="" class="form-item">
+                                <article class="m-5" id="buttons">
+                                    <div class="tamanhoSofa">
+                                        <h5 class="mb-5">Nº DE PESSOAS SENTADAS</h5>
+                                        <div class="mb-5" id="sofa-size">
+                                            <input type="radio" class="btn-check" data-pessoas-sentadas name="options" id="option1" autocomplete="off" value="1">
+                                            <label class="btn rounded-circle lugares-sofa" for="option1">2</label>
+                                            <input type="radio" class="btn-check" data-pessoas-sentadas name="options" id="option2" autocomplete="off" value="1.5">
+                                            <label class="btn rounded-circle lugares-sofa" for="option2">3</label>
+                                            <input type="radio" class="btn-check" data-pessoas-sentadas name="options" id="option3" autocomplete="off" value="2">
+                                            <label class="btn rounded-circle lugares-sofa" for="option3">4</label>
+                                            <input type="radio" class="btn-check" data-pessoas-sentadas name="options" id="option4" autocomplete="off" value="3">
+                                            <label class="btn rounded-circle lugares-sofa" for="option4">5</label>
                                         </div>
                                     </div>
-                                </div>
-                                <div>
-                                    <h5>SERVIÇOS</h5>
-                                    <fieldset class="mb-3">
-                                        <div class="form-check">
-                                            <input type="checkbox" name="radios" class="form-check-input hig-profunda"
-                                                id="descontaminacao">
-                                            <label data-descontaminacao"
-                                                for="descontaminacao">Descontaminação
-                                                Profunda</label>
+                                    <div class="caracteristicasSofa">
+                                        <h5>CARACTERISTICAS</h5>
+                                        <div class="bd-example-snippet bd-code-snippet ">
+                                            <div class="bd-example mt-5 mb-5">
+                                                <button type="button" class="btn border-dark m-2 size-selected">Sofá
+                                                    Retrátil</button>
+                                                <button type="button" class="btn border-dark m-2 size-selected">Sofá
+                                                    Comum</button>
+                                                <button type="button" class="btn border-dark m-2 size-selected">Sofá de
+                                                    Canto</button>
+                                                <button type="button" class="btn border-dark m-2 size-selected">Sofá com
+                                                    chaise</button>
+                                                <button type="button" class="btn border-dark m-2 size-selected">Sofá
+                                                    Cama</button>
+                                            </div>
                                         </div>
-                                        <div class="mb-3 form-check">
-                                            <input type="checkbox" name="radios" class="form-check-input remocao-de-manchas" id="lavacao" >
-                                            <label class="form-check-label" for="lavacao">Remoção de Manchas</label>
-                                        </div>
-                                    </fieldset>
-                                </div>
-                            </article>
+                                    </div>
+                                    <div>
+                                        <h5>SERVIÇOS</h5>
+                                        <fieldset class="mb-3">
+                                            <div class="form-check">
+                                                <input type="checkbox" name="radios" class="form-check-input hig-profunda"
+                                                    id="descontaminacao">
+                                                <label data-descontaminacao"
+                                                    for="descontaminacao">Descontaminação
+                                                    Profunda</label>
+                                            </div>
+                                            <div class="mb-3 form-check">
+                                                <input type="checkbox" name="radios" class="form-check-input remocao-de-manchas" id="lavacao" >
+                                                <label class="form-check-label" for="lavacao">Remoção de Manchas</label>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                </article>
+                            </form>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary adicionar" >Adicionar</button>
+                            <button type="button" class="btn btn-primary adicionar" data-bs-dismiss="modal" >Adicionar</button>
                         </div>
                     </div>
                 </div>

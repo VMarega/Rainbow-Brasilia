@@ -3,6 +3,8 @@ const higProfunda = document.querySelector(".hig-profunda");
 const adicionar = document.querySelector(".adicionar");
 let preco = document.querySelector("[data-valor]");
 const tamanhoSofa = document.querySelectorAll("[data-pessoas-sentadas]");
+const formItem = document.querySelector(".form-item");
+const modal = document.querySelectorAll(".modal");
 let valorLavagemSofa2Lugares = 175;
 let valorLavagemSofa3Lugares = 200;
 let valorLavagemSofa4Lugares = 225;
@@ -56,6 +58,7 @@ tamanhoSofa.forEach((elemento) => {
         adicionar.addEventListener("click", (e)=>{
             if(lavagem.checked){
                 verificaTamanhoSofaLavagem(evento.target.value);
+                formItem.reset();
             }
                 // quero que feche o modal
                 // quero que inclua o item adicionado na lista
@@ -65,6 +68,7 @@ tamanhoSofa.forEach((elemento) => {
                 alert(`Selecione o serviço desejado para este item`)
             }
         })
+        formItem.reset();
     })
 })
 
