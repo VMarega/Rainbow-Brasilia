@@ -89,42 +89,36 @@
                                     <div class="tamanhoSofa">
                                         <h5 class="mb-5">Nº DE PESSOAS SENTADAS</h5>
                                         <div class="mb-5" id="sofa-size">
-                                            <input type="radio" class="btn-check" data-pessoas-sentadas name="options" id="option1" autocomplete="off" value="1">
+                                            <input type="radio" class="btn-check" data-pessoas-sentadas data-item-pacote name="options" id="option1" autocomplete="off" value="1">
                                             <label class="btn rounded-circle lugares-sofa" for="option1">2</label>
-                                            <input type="radio" class="btn-check" data-pessoas-sentadas name="options" id="option2" autocomplete="off" value="1.5">
+                                            <input type="radio" class="btn-check" data-pessoas-sentadas data-item-pacote name="options" id="option2" autocomplete="off" value="1.5">
                                             <label class="btn rounded-circle lugares-sofa" for="option2">3</label>
-                                            <input type="radio" class="btn-check" data-pessoas-sentadas name="options" id="option3" autocomplete="off" value="2">
+                                            <input type="radio" class="btn-check" data-pessoas-sentadas data-item-pacote name="options" id="option3" autocomplete="off" value="2">
                                             <label class="btn rounded-circle lugares-sofa" for="option3">4</label>
-                                            <input type="radio" class="btn-check" data-pessoas-sentadas name="options" id="option4" autocomplete="off" value="3">
+                                            <input type="radio" class="btn-check" data-pessoas-sentadas data-item-pacote name="options" id="option4" autocomplete="off" value="2.5">
                                             <label class="btn rounded-circle lugares-sofa" for="option4">5</label>
                                         </div>
                                     </div>
                                     <div class="caracteristicasSofa">
-                                        <h5>CARACTERISTICAS</h5>
-                                        <div class="bd-example-snippet bd-code-snippet ">
-                                            <div class="bd-example mt-5 mb-5">
-                                                <button type="button" class="btn border-dark m-2 size-selected">Sofá
-                                                    Retrátil</button>
-                                                <button type="button" class="btn border-dark m-2 size-selected">Sofá
-                                                    Comum</button>
-                                                <button type="button" class="btn border-dark m-2 size-selected">Sofá de
-                                                    Canto</button>
-                                                <button type="button" class="btn border-dark m-2 size-selected">Sofá com
-                                                    chaise</button>
-                                                <button type="button" class="btn border-dark m-2 size-selected">Sofá
-                                                    Cama</button>
-                                            </div>
+                                        <h5 class="mb-5">CARACTERISTICAS</h5>
+                                        <div class="mb-5">
+                                            <input type="radio" class="btn-check" data-sofa-caract name="options" id="optionC1" autocomplete="off" value="0.5">
+                                            <label class="btn m-3 lugares-sofa" for="optionC1">Sofá Retrátil</label>
+                                            <input type="radio" class="btn-check" data-sofa-caract name="options" id="optionC2" autocomplete="off" value="0.5">
+                                            <label class="btn m-3 lugares-sofa" for="optionC2">Sofá de Canto</label>
+                                            <input type="radio" class="btn-check" data-sofa-caract name="options" id="optionC3" autocomplete="off" value="0.5">
+                                            <label class="btn m-3 lugares-sofa" for="optionC3">Sofá com Chaise</label>
+                                            <input type="radio" class="btn-check" data-sofa-caract name="options" id="optionC4" autocomplete="off" value="0.5">
+                                            <label class="btn m-3 lugares-sofa" for="optionC4">Sofá Cama</label>
                                         </div>
                                     </div>
                                     <div>
                                         <h5>SERVIÇOS</h5>
                                         <fieldset class="mb-3">
                                             <div class="form-check">
-                                                <input type="checkbox" name="radios" class="form-check-input hig-profunda"
-                                                    id="descontaminacao">
-                                                <label data-descontaminacao"
-                                                    for="descontaminacao">Descontaminação
-                                                    Profunda</label>
+                                                <input type="checkbox" name="radios" class="form-check-input hig-profunda" id="descontaminacao">
+                                                <label data-descontaminacao for="descontaminacao">Descontaminação
+                                                Profunda</label>
                                             </div>
                                             <div class="mb-3 form-check">
                                                 <input type="checkbox" name="radios" class="form-check-input remocao-de-manchas" id="lavacao" >
@@ -159,41 +153,39 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <article class="m-5" id="buttons">
-                                <div class="tamanhosColchao">
-                                    <h5 class="mb-5">TAMANHO</h5>
-                                    <div class="mb-5">
-                                        <input type="radio" class="btn-check" name="options" id="optionCama1"
-                                            autocomplete="off">
-                                        <label class="btn rounded-circle lugares-sofa"
-                                            for="optionCama1">Solteiro</label>
-                                        <input type="radio" class="btn-check" name="options" id="optionCama2"
-                                            autocomplete="off">
-                                        <label class="btn rounded-circle lugares-sofa" for="optionCama2">Casal</label>
-                                        <input type="radio" class="btn-check" name="options" id="optionCama3"
-                                            autocomplete="off">
-                                        <label class="btn rounded-circle lugares-sofa" for="optionCama3">Queen</label>
-                                        <input type="radio" class="btn-check" name="options" id="optionCama4"
-                                            autocomplete="off">
-                                        <label class="btn rounded-circle lugares-sofa" for="optionCama4">King</label>
+                            <form class="form-item">
+                                <article class="m-5" id="buttons">
+                                    <div class="tamanhosColchao">
+                                        <h5 class="mb-5">Tamanho</h5>
+                                        <div class="mb-5" id="colchao-size">
+                                            <input type="radio" class="btn-check" data-cama name="options" id="optionCama1" autocomplete="off" value="1">
+                                            <label class="btn rounded-circle lugares-sofa" for="optionCama1">Solteiro</label>
+                                            <input type="radio" class="btn-check" data-cama data-item-pacote name="options" id="optionCama2" autocomplete="off" value="1.5">
+                                            <label class="btn rounded-circle lugares-sofa" for="optionCama2">Casal</label>
+                                            <input type="radio" class="btn-check" data-cama data-item-pacote name="options" id="optionCama3" autocomplete="off" value="2">
+                                            <label class="btn rounded-circle lugares-sofa" for="optionCama3">Queen</label>
+                                            <input type="radio" class="btn-check" data-cama data-item-pacote name="options" id="Cama4" autocomplete="off" value="2.5">
+                                            <label class="btn rounded-circle lugares-sofa" for="Cama4">King</label>
+                                            <input type="radio" class="btn-check" data-cama data-item-pacote name="options" id="option4" autocomplete="off" value="2.5">
+                                            <label class="btn rounded-circle lugares-sofa" for="option4">Super-King</label>
+                                        </div>
                                     </div>
-                                </div>
-                                <div>
-                                    <h5>SERVIÇOS</h5>
-                                    <fieldset class="mb-3">
-                                        <div class="form-check">
-                                            <input type="checkbox" name="radios" class="form-check-input"
-                                                id="descontaminacao">
-                                            <label class="form-check-label" for="descontaminacao">Descontaminação
+                                    <div>
+                                        <h5>SERVIÇOS</h5>
+                                        <fieldset class="mb-3">
+                                            <div class="form-check">
+                                                <input type="checkbox" name="radios" class="form-check-input"  id="descontaminacao">
+                                                <label class="form-check-label" for="descontaminacao">Descontaminação
                                                 Profunda</label>
-                                        </div>
-                                        <div class="mb-3 form-check">
-                                            <input type="checkbox" name="radios" class="form-check-input" id="lavacao">
-                                            <label class="form-check-label" for="lavacao">Remoção de Manchas</label>
-                                        </div>
-                                    </fieldset>
-                                </div>
-                            </article>
+                                            </div>
+                                            <div class="mb-3 form-check">
+                                                <input type="checkbox" name="radios" class="form-check-input" id="lavacao">
+                                                <label class="form-check-label" for="lavacao">Remoção de Manchas</label>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                </article>
+                            </form>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -242,10 +234,9 @@
                                     <h5>SERVIÇOS</h5>
                                     <fieldset class="mb-3">
                                         <div class="form-check">
-                                            <input type="checkbox" name="radios" class="form-check-input"
-                                                id="descontaminacao">
+                                            <input type="checkbox" name="radios" class="form-check-input" id="descontaminacao">
                                             <label class="form-check-label" for="descontaminacao">Descontaminação
-                                                Profunda</label>
+                                            Profunda</label>
                                         </div>
                                         <div class="mb-3 form-check">
                                             <input type="checkbox" name="radios" class="form-check-input" id="lavacao">
@@ -296,10 +287,8 @@
                                     <h5>SERVIÇOS</h5>
                                     <fieldset class="mb-3">
                                         <div class="form-check">
-                                            <input type="checkbox" name="radios" class="form-check-input"
-                                                id="descontaminacao">
-                                            <label class="form-check-label" for="descontaminacao">Descontaminação
-                                                Profunda</label>
+                                            <input type="checkbox" name="radios" class="form-check-input" id="descontaminacao">
+                                            <label class="form-check-label" for="descontaminacao">Descontaminação Profunda</label>
                                         </div>
                                         <div class="mb-3 form-check">
                                             <input type="checkbox" name="radios" class="form-check-input" id="lavacao">
@@ -338,10 +327,8 @@
                                     <h5>SERVIÇOS</h5>
                                     <fieldset class="mb-3">
                                         <div class="form-check">
-                                            <input type="checkbox" name="radios" class="form-check-input"
-                                                id="descontaminacao">
-                                            <label class="form-check-label" for="descontaminacao">Descontaminação
-                                                Profunda</label>
+                                            <input type="checkbox" name="radios" class="form-check-input" id="descontaminacao">
+                                            <label class="form-check-label" for="descontaminacao">Descontaminação Profunda</label>
                                         </div>
                                         <div class="mb-3 form-check">
                                             <input type="checkbox" name="radios" class="form-check-input" id="lavacao">
@@ -380,8 +367,7 @@
                                     <h5>SERVIÇOS</h5>
                                     <fieldset class="mb-3">
                                         <div class="form-check">
-                                            <input type="checkbox" name="radios" class="form-check-input"
-                                                id="descontaminacao">
+                                            <input type="checkbox" name="radios" class="form-check-input" id="descontaminacao">
                                             <label class="form-check-label" for="descontaminacao">Descontaminação
                                                 Profunda</label>
                                         </div>
@@ -443,8 +429,7 @@
                                     <h5>SERVIÇOS</h5>
                                     <fieldset class="mb-3">
                                         <div class="form-check">
-                                            <input type="checkbox" name="radios" class="form-check-input" checked
-                                                id="descontaminacao">
+                                            <input type="checkbox" name="radios" class="form-check-input" checked id="descontaminacao">
                                             <label class="form-check-label" for="descontaminacao">Descontaminação
                                                 Profunda</label>
                                         </div>
@@ -481,8 +466,7 @@
                                     <h5>SERVIÇOS</h5>
                                     <fieldset class="mb-3">
                                         <div class="form-check">
-                                            <input type="checkbox" name="radios" class="form-check-input"
-                                                id="descontaminacao">
+                                            <input type="checkbox" name="radios" class="form-check-input" id="descontaminacao">
                                             <label class="form-check-label" for="descontaminacao">Descontaminação
                                                 Profunda</label>
                                         </div>
@@ -524,7 +508,7 @@
                                     <h5>SERVIÇOS</h5>
                                     <fieldset class="mb-3">
                                         <div class="form-check mb-3">
-                                            <input type="checkbox" name="radios" class="form-check-input"
+                                            <input type="checkbox" name="radios" class="form-check-input hig-profunda"
                                                 id="descontaminacao" checked>
                                             <label class="form-check-label" for="descontaminacao">Descontaminação
                                                 Profunda</label>
@@ -568,6 +552,7 @@
         </footer>
     </div>
     <script src="main.js"></script>
+    <script src="pacoteDeHigProfunda.js"></script>
 </body>
 
 </html>
