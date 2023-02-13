@@ -1,4 +1,5 @@
 const itemDoPacote = document.querySelectorAll("[data-item-pacote]")
+
 let pacoteAtual=0;
 let pacote5itens = 200;
 let sextoItem = 40;
@@ -9,6 +10,7 @@ let dezAoQuinze = 27.5;
 let pacote15itens = 400;
 let pacoteFinal = 0;
 let precoDoPacote = 0 + verificaPacote;
+
 
 itemDoPacote.forEach((elemento)=>{
     elemento.addEventListener("change" , (evento)=>{

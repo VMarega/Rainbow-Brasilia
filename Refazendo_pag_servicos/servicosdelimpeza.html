@@ -218,14 +218,14 @@
                                         <div class="bd-example mt-5 mb-5">
                                             <form action="post">
                                                 <label class="d-block fs-5 m-3" for="larguraTapete">Largura</label>
-                                                <input type="text" id="larguraTapete" placeholder="em m">
+                                                <input type="number" id="largura-tapete" placeholder="em m">
                                                 <label class="d-block fs-5 m-3"
                                                     for="comprimentoTapete">Comprimento</label>
-                                                <input type="text" id="comprimentoTapete" placeholder="em m">
+                                                <input type="number" id="comprimento-tapete" placeholder="em m">
                                             </form>
                                             <div class="area">
-                                                <label for="" class="d-block fs-5 m-3">Área</label>
-                                                <input type="text" class="metragem" value="00">
+                                                <button for="" class="d-block fs-5 m-3 lugares-sofa border-0 rounded area-tapete">Click para calcular área</button>
+                                                <input type="number" class="metragem" value="00">
                                             </div>
                                         </div>
                                     </div>
@@ -234,13 +234,13 @@
                                     <h5>SERVIÇOS</h5>
                                     <fieldset class="mb-3">
                                         <div class="form-check">
-                                            <input type="checkbox" name="radios" class="form-check-input" id="descontaminacao">
-                                            <label class="form-check-label" for="descontaminacao">Descontaminação
+                                            <input type="checkbox" name="radios" class="form-check-input hig-profunda3" id="descontaminacao3">
+                                            <label class="form-check-label" for="descontaminacao3">Descontaminação
                                             Profunda</label>
                                         </div>
                                         <div class="mb-3 form-check">
-                                            <input type="checkbox" name="radios" class="form-check-input" id="lavacao">
-                                            <label class="form-check-label" for="lavacao">Remoção de Manchas</label>
+                                            <input type="checkbox" name="radios" class="form-check-input" id="lavacao3">
+                                            <label class="form-check-label" for="lavacao3">Remoção de Manchas</label>
                                         </div>
                                     </fieldset>
                                 </div>
@@ -564,13 +564,14 @@
             <div class="align-content-center">
                 <p class="text-center text-muted">&copy; 2023 Rainbow Brasilia</p>
                 <a href="" class="nav-link">
-                    <p class="text-center text-muted"> Criado por Vinicius Marega</p>
+                    <p class="text-center text-muted">&copy; Criado por Vinicius Marega</p>
                 </a>
             </div>
         </footer>
     </div>
     <script src="main.js"></script>
     <script src="pacoteDeHigProfunda.js"></script>
+    <script src="tapete.js"></script>
 </body>
 
 </html>
