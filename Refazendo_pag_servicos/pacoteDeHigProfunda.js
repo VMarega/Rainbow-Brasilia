@@ -9,7 +9,7 @@ let pacote10itens = 300;
 let dezAoQuinze = 27.5;
 let pacote15itens = 400;
 let pacoteFinal = 0;
-let precoDoPacote = 0 + verificaPacote;
+let precoDoPacote = 0;
 
 
 itemDoPacote.forEach((elemento)=>{
@@ -25,7 +25,7 @@ function montaPacoteHigProfunda(tamanho){
 }
 
 function verificaPacote (){
-    console.log(precoDoPacote)
+    console.log(precoDoPacote);
     if (pacoteFinal == 6){
         preco.value -= precoDoPacote;
         precoDoPacote = pacote5itens + sextoItem;

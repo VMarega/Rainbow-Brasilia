@@ -95,7 +95,7 @@
                                             <label class="btn rounded-circle lugares-sofa" for="option2">3</label>
                                             <input type="radio" class="btn-check" data-pessoas-sentadas data-item-pacote name="options" id="option3" autocomplete="off" value="2">
                                             <label class="btn rounded-circle lugares-sofa" for="option3">4</label>
-                                            <input type="radio" class="btn-check" data-pessoas-sentadas data-item-pacote name="options" id="option4" autocomplete="off" value="2.5">
+                                            <input type="radio" class="btn-check" data-pessoas-sentadas data-item-pacote name="options" id="option4" autocomplete="off" value="6">
                                             <label class="btn rounded-circle lugares-sofa" for="option4">5</label>
                                         </div>
                                     </div>
@@ -211,44 +211,46 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <article class="m-5" id="buttons">
-                                <div class="justify-content-center">
-                                    <h5>TAMANHO</h5>
-                                    <div class="bd-example-snippet bd-code-snippet ">
-                                        <div class="bd-example mt-5 mb-5">
-                                            <form action="post">
-                                                <label class="d-block fs-5 m-3" for="larguraTapete">Largura</label>
-                                                <input type="number" id="largura-tapete" placeholder="em m">
-                                                <label class="d-block fs-5 m-3"
-                                                    for="comprimentoTapete">Comprimento</label>
-                                                <input type="number" id="comprimento-tapete" placeholder="em m">
-                                            </form>
-                                            <div class="area">
-                                                <button for="" class="d-block fs-5 m-3 lugares-sofa border-0 rounded area-tapete">Click para calcular área</button>
-                                                <input type="number" class="metragem" value="00">
+                            <form action="" class="form-item">
+                                <article class="m-5" id="buttons">
+                                    <div class="justify-content-center">
+                                        <h5>TAMANHO</h5>
+                                        <div class="bd-example-snippet bd-code-snippet ">
+                                            <div class="bd-example mt-5 mb-5">
+                                                <form action="post">
+                                                    <label class="d-block fs-5 m-3" for="larguraTapete">Largura</label>
+                                                    <input type="number" id="largura-tapete" placeholder="em m">
+                                                    <label class="d-block fs-5 m-3"
+                                                        for="comprimentoTapete">Comprimento</label>
+                                                    <input type="number" id="comprimento-tapete" placeholder="em m">
+                                                </form>
+                                                <div class="area">
+                                                    <label class="d-block fs-5 m-3 metragem" for="area-tapete">Área</label>
+                                                    <input type="number" id="area-tapete">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div>
-                                    <h5>SERVIÇOS</h5>
-                                    <fieldset class="mb-3">
-                                        <div class="form-check">
-                                            <input type="checkbox" name="radios" class="form-check-input hig-profunda3" id="descontaminacao3">
-                                            <label class="form-check-label" for="descontaminacao3">Descontaminação
-                                            Profunda</label>
-                                        </div>
-                                        <div class="mb-3 form-check">
-                                            <input type="checkbox" name="radios" class="form-check-input" id="lavacao3">
-                                            <label class="form-check-label" for="lavacao3">Remoção de Manchas</label>
-                                        </div>
-                                    </fieldset>
-                                </div>
-                            </article>
+                                    <div>
+                                        <h5>SERVIÇOS</h5>
+                                        <fieldset class="mb-3">
+                                            <div class="form-check">
+                                                <input type="checkbox" name="radios" class="form-check-input hig-profunda3" id="descontaminacao3">
+                                                <label class="form-check-label" for="descontaminacao3">Descontaminação
+                                                Profunda</label>
+                                            </div>
+                                            <div class="mb-3 form-check">
+                                                <input type="checkbox" name="radios" class="form-check-input" id="lavacao3">
+                                                <label class="form-check-label" for="lavacao3">Remoção de Manchas</label>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                </article>
+                            </form>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
+                            <button type="button" class="btn btn-primary adicionar" data-add-tapete>Adidcionar</button>
                         </div>
                     </div>
                 </div>
@@ -270,37 +272,39 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <article class="m-5" id="buttons">
-                                <div class="justify-content-center">
-                                    <h5>TAMANHO</h5>
-                                    <div class="bd-example-snippet bd-code-snippet ">
-                                        <div class="bd-example mt-5 mb-5">
-                                            <div class="area">
-                                                <label for="" class="d-block fs-5 m-3">Área</label>
-                                                <input type="text" class="metragem"
-                                                    placeholder="Em m², digite apenas nº">
+                            <form action="" class="form-item">
+                                <article class="m-5" id="buttons">
+                                    <div class="justify-content-center">
+                                        <h5>TAMANHO</h5>
+                                        <div class="bd-example-snippet bd-code-snippet ">
+                                            <div class="bd-example mt-5 mb-5">
+                                                <div class="area">
+                                                    <label for="" class="d-block fs-5 m-3">Área</label>
+                                                    <input type="number" id="area-carpete"
+                                                        placeholder="Em m², digite apenas nº">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div>
-                                    <h5>SERVIÇOS</h5>
-                                    <fieldset class="mb-3">
-                                        <div class="form-check">
-                                            <input type="checkbox" name="radios" class="form-check-input" id="descontaminacao">
-                                            <label class="form-check-label" for="descontaminacao">Descontaminação Profunda</label>
-                                        </div>
-                                        <div class="mb-3 form-check">
-                                            <input type="checkbox" name="radios" class="form-check-input" id="lavacao">
-                                            <label class="form-check-label" for="lavacao">Remoção de Manchas</label>
-                                        </div>
-                                    </fieldset>
-                                </div>
-                            </article>
+                                    <div>
+                                        <h5>SERVIÇOS</h5>
+                                        <fieldset class="mb-3">
+                                            <div class="form-check">
+                                                <input type="checkbox" name="radios" class="form-check-input" id="descontaminacao">
+                                                <label class="form-check-label hig-profunda4" for="descontaminacao">Descontaminação Profunda</label>
+                                            </div>
+                                            <div class="mb-3 form-check">
+                                                <input type="checkbox" name="radios" class="form-check-input" id="lavacao">
+                                                <label class="form-check-label" for="lavacao">Remoção de Manchas</label>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                </article>
+                            </form>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
+                            <button type="button" class="btn btn-primary adicionar" data-bs-dismiss="modal">Adicionar</button>
                         </div>
                     </div>
                 </div>
@@ -346,7 +350,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary adicionar">Adicionar</button>
+                            <button type="button" class="btn btn-primary adicionar" data-bs-dismiss="modal">Adicionar</button>
                         </div>
                     </div>
                 </div>
@@ -417,38 +421,39 @@
                         </div>
                         <div class="modal-body">
                             <article class="m-5" id="buttons">
-                                <div class="justify-content-center">
-                                    <h5>TAMANHO DA ESTANTE</h5>
-                                    <div class="bd-example-snippet bd-code-snippet ">
-                                        <div class="bd-example mt-5 mb-5">
-                                            <form action="post">
-                                                <label class="d-block fs-5 m-3" for="larguraTapete">Largura</label>
-                                                <input type="text" id="larguraTapete" placeholder="em m">
-                                                <label class="d-block fs-5 m-3" for="comprimentoTapete">Altura</label>
-                                                <input type="text" id="comprimentoTapete" placeholder="em m">
-                                            </form>
-                                            <div class="area">
-                                                <label for="" class="d-block fs-5 m-3">Área</label>
-                                                <input type="text" class="metragem" value="00">
+                                <form action="" class="form-item">
+                                    <div class="justify-content-center">
+                                        <h5>TAMANHO DA ESTANTE</h5>
+                                        <div class="bd-example-snippet bd-code-snippet ">
+                                            <div class="bd-example mt-5 mb-5">
+                                                <form action="post">
+                                                    <label class="d-block fs-5 m-3" for="larguraLivros">Largura</label>
+                                                    <input type="number" id="larguraLivros" placeholder="em m">
+                                                    <label class="d-block fs-5 m-3" for="comprimentoLivros">Altura</label>
+                                                    <input type="number" id="comprimentoLivros" placeholder="em m">
+                                                </form>
+                                                <div class="area">
+                                                    <label for="" class="d-block fs-5 m-3">Área</label>
+                                                    <input type="number" class="areaLivros">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div>
-                                    <h5>SERVIÇOS</h5>
-                                    <fieldset class="mb-3">
-                                        <div class="form-check">
-                                            <input type="checkbox" name="radios" class="form-check-input" checked id="descontaminacao">
-                                            <label class="form-check-label" for="descontaminacao">Descontaminação
-                                                Profunda</label>
-                                        </div>
-                                    </fieldset>
-                                </div>
+                                    <div>
+                                        <h5>SERVIÇOS</h5>
+                                        <fieldset class="mb-3">
+                                            <div class="form-check">
+                                                <input type="checkbox" name="radios" class="form-check-input" checked id="descontaminacao9">
+                                                <label class="form-check-label hig-profunda9" for="descontaminacao9">Descontaminação Profunda</label>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                </form>
                             </article>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
+                            <button type="button" class="btn btn-primary adicionar" data-bs-dismiss="modal">Adicionar</button>
                         </div>
                     </div>
                 </div>
@@ -572,6 +577,8 @@
     <script src="main.js"></script>
     <script src="pacoteDeHigProfunda.js"></script>
     <script src="tapete.js"></script>
+    <script src="carpete.js"></script>
+    <script src="livros.js"></script>
 </body>
 
 </html>

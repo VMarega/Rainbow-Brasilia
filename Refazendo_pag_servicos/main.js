@@ -32,6 +32,8 @@ tamanhoSofa.forEach((elemento)=>{
     })
 })
 
+
+
 function calculaPrecoDoItem(tamanho){
     if(tamanho == 1){
         precoDoItem = precoDoItem + valorLavagemSofa2Lugares
@@ -41,8 +43,6 @@ function calculaPrecoDoItem(tamanho){
         precoDoItem = precoDoItem + valorLavagemSofa4Lugares
     } else if (tamanho == 2.5) {
         precoDoItem = precoDoItem + valorLavagemSofa5Lugares
-    } else {
-        alert(`Escolha o Nº de pessoas sentadas`)
     }
 }
 
@@ -60,14 +60,21 @@ elemento.addEventListener("click", evento=>{
         preco.value = parseInt(preco.value) + precoDoItem + acrescimoCaract;
         formItem.forEach((elemento)=>{elemento.reset();})
         
-    } else if (higProfunda.checked || higProfunda2.checked || higProfunda5.checked || higProfunda6.checked || higProfunda7.checked || higProfunda8.checked){
+    } else if (higProfunda.checked || higProfunda2.checked || higProfunda3.checked || higProfunda4.checked || higProfunda5.checked || higProfunda6.checked || higProfunda7.checked || higProfunda8.checked || higProfunda9.checked){
+        if(higProfunda3.checked){
+            calculaQuantidadeItensDoTapete();
+        } else if (higProfunda4.checked){
+            calculaQuantidadeItensDoCarpete();
+        } else if (higProfunda9.checked) {
+            calculaItensLivros();
+        }
         pacoteFinal += pacoteAtual;
         console.log(pacoteFinal)
         if(pacoteFinal > 5){
         verificaPacote();
         preco.value = parseInt(preco.value) + precoDoPacote;
         formItem.forEach((elemento)=>{elemento.reset();})
-        } else if (!verifica){
+        } else if (pacoteFinal <=5 && !verifica && pacoteFinal>0){
             precoDoPacote = pacote5itens;
             preco.value = parseInt(preco.value) + precoDoPacote;
             verifica = true;
