@@ -1,5 +1,5 @@
 const itemDoPacote = document.querySelectorAll("[data-item-pacote]")
-
+const itemAreaDoPacote = document.querySelectorAll("[data-item-area]");
 let pacoteAtual=0;
 let pacote5itens = 200;
 let sextoItem = 40;
@@ -11,6 +11,14 @@ let pacote15itens = 400;
 let pacoteFinal = 0;
 let precoDoPacote = 0;
 
+
+itemAreaDoPacote.forEach((elemento)=>{
+    elemento.addEventListener("change", (evento)=>{
+        console.log('helo');
+        montaPacoteHigProfunda(evento.target.value / 4)
+        return pacoteAtual;
+    })
+})
 
 itemDoPacote.forEach((elemento)=>{
     elemento.addEventListener("change" , (evento)=>{

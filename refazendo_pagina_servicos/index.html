@@ -226,7 +226,7 @@
                                                 </form>
                                                 <div class="area">
                                                     <label class="d-block fs-5 m-3 metragem" for="area-tapete">Área</label>
-                                                    <input type="number" id="area-tapete">
+                                                    <input type="number" id="area-tapete" data-item-area>
                                                 </div>
                                             </div>
                                         </div>
@@ -281,7 +281,7 @@
                                                 <div class="area">
                                                     <label for="" class="d-block fs-5 m-3">Área</label>
                                                     <input type="number" id="area-carpete"
-                                                        placeholder="Em m², digite apenas nº">
+                                                        placeholder="Em m², digite apenas nº" data-item-area>
                                                 </div>
                                             </div>
                                         </div>
@@ -290,12 +290,12 @@
                                         <h5>SERVIÇOS</h5>
                                         <fieldset class="mb-3">
                                             <div class="form-check">
-                                                <input type="checkbox" name="radios" class="form-check-input" id="descontaminacao">
-                                                <label class="form-check-label hig-profunda4" for="descontaminacao">Descontaminação Profunda</label>
+                                                <input type="checkbox" name="radios" class="form-check-input" id="descontaminacao4">
+                                                <label class="form-check-label hig-profunda4" for="descontaminacao4">Descontaminação Profunda</label>
                                             </div>
                                             <div class="mb-3 form-check">
-                                                <input type="checkbox" name="radios" class="form-check-input" id="lavacao">
-                                                <label class="form-check-label" for="lavacao">Remoção de Manchas</label>
+                                                <input type="checkbox" name="radios" class="form-check-input" id="lavacao4">
+                                                <label class="form-check-label" for="lavacao4">Remoção de Manchas</label>
                                             </div>
                                         </fieldset>
                                     </div>
@@ -376,8 +376,8 @@
                                 <article class="m-5" id="buttons">
                                     <h5>Quantas Poltronas Deseja Adicionar?</h5>
                                     <div>
-                                        <label class="btn lugares-sofa" for="optionAr">Quantidade</label>
-                                        <input type="number"  data-item-pacote name="options" id="optionAr" autocomplete="off" value="0">
+                                        <label class="btn lugares-sofa" for="optionPoltrona">Quantidade</label>
+                                        <input type="number"  data-item-pacote name="options" id="optionPoltrona" autocomplete="off">
                                     </div>
                                     <div>
                                         <h5>SERVIÇOS</h5>
@@ -576,8 +576,6 @@
     </div>
     <script src="main.js"></script>
     <script src="pacoteDeHigProfunda.js"></script>
-    <script src="tapete.js"></script>
-    <script src="carpete.js"></script>
     <script src="livros.js"></script>
 </body>
 

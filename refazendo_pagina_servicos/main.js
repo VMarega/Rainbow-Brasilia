@@ -2,6 +2,8 @@ const tamanhoSofa = document.querySelectorAll("[data-pessoas-sentadas]");
 const adicionar = document.querySelectorAll(".adicionar");
 const higProfunda = document.querySelector(".hig-profunda");
 const higProfunda2 = document.querySelector(".hig-profunda2");
+const higProfunda3 = document.querySelector(".hig-profunda3");
+const higProfunda4 = document.querySelector(".hig-profunda4");
 const higProfunda5 = document.querySelector(".hig-profunda5");
 const higProfunda6 = document.querySelector(".hig-profunda6");
 const higProfunda7 = document.querySelector(".hig-profunda7")
@@ -46,11 +48,68 @@ function calculaPrecoDoItem(tamanho){
     }
 }
 
-/*tTamanhoSofa.forEach((elemento)=>{
-    elemento.addEventListener("change", (evento)=>{
-        montaPacoteHigProfunda(evento.target.value);
-    })
-})*/
+
+// calculo tapete
+let compTapete = document.querySelector("#comprimento-tapete");
+let largTapete = document.querySelector("#largura-tapete");
+let metragem = document.querySelector("#area-tapete");
+/*let itensTapete = 0;
+const botaoTapete = document.querySelector("[data-add-tapete]");*/
+
+function calculaAreaDoTapete (){
+    metragem.value = compTapete.value * largTapete.value;
+}
+
+largTapete.addEventListener("change", (evento)=>{
+    calculaAreaDoTapete();
+})
+
+compTapete.addEventListener("change", (evento)=>{
+    calculaAreaDoTapete();
+})
+/*
+botaoTapete.addEventListener("click", (evento)=>{
+    calculaQuantidadeItensDoTapete();
+})
+
+function calculaQuantidadeItensDoTapete (){
+    itensTapete = metragem.value / 4;
+    if (itensTapete < 1 && itensTapete > 0){
+        pacoteAtual = 1;
+    } else {
+        pacoteAtual = parseInt(itensTapete);
+    }
+    return pacoteAtual
+}*/
+
+//fim calculo tapete
+
+//calculo carpete
+const areaCarpete = document.querySelector("#area-carpete");
+/*let itensCarpete = 0;
+
+function calculaQuantidadeItensDoCarpete (){
+    itensCarpete = (areaCarpete.value / 4);
+    console.log(itensCarpete);
+    if (itensCarpete < 1){
+        pacoteAtual = 1;
+    } else {
+        pacoteAtual = parseInt(itensCarpete);
+    }
+    return pacoteAtual
+}
+//fim calculo carpete
+
+function verificarTCL(){
+    if (higProfunda3.checked){
+        calculaQuantidadeItensDoTapete();
+    } else if (higProfunda4.checked){
+        calculaQuantidadeItensDoCarpete();
+    }else if (higProfunda9.checked){
+        calculaItensLivros();
+    }
+    return pacoteAtual;
+}*/
 
 let verifica = false;
 
@@ -60,14 +119,7 @@ elemento.addEventListener("click", evento=>{
         preco.value = parseInt(preco.value) + precoDoItem + acrescimoCaract;
         formItem.forEach((elemento)=>{elemento.reset();})
         
-    } else if (higProfunda.checked || higProfunda2.checked || higProfunda3.checked || higProfunda4.checked || higProfunda5.checked || higProfunda6.checked || higProfunda7.checked || higProfunda8.checked || higProfunda9.checked){
-        if(higProfunda3.checked){
-            calculaQuantidadeItensDoTapete();
-        } else if (higProfunda4.checked){
-            calculaQuantidadeItensDoCarpete();
-        } else if (higProfunda9.checked) {
-            calculaItensLivros();
-        }
+    } else if (higProfunda.checked || higProfunda2.checked || higProfunda3.checked || higProfunda4.checked || higProfunda5.checked || higProfunda6.checked || higProfunda7.checked || higProfunda8.checked){
         pacoteFinal += pacoteAtual;
         console.log(pacoteFinal)
         if(pacoteFinal > 5){
@@ -83,7 +135,9 @@ elemento.addEventListener("click", evento=>{
             preco.value = parseInt(preco.value) + 0;
             formItem.forEach((elemento)=>{elemento.reset();})
         }
-    } else {
+    } 
+    
+    else {
         alert(`Você deve informar um serviço para o item adicionado`)
     }
 })
