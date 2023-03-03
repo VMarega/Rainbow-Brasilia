@@ -58,6 +58,7 @@ const botaoTapete = document.querySelector("[data-add-tapete]");*/
 
 function calculaAreaDoTapete (){
     metragem.value = compTapete.value * largTapete.value;
+    montaPacoteHigProfunda(metragem.value/4);
 }
 
 largTapete.addEventListener("change", (evento)=>{
@@ -110,6 +111,28 @@ function verificarTCL(){
     }
     return pacoteAtual;
 }*/
+
+//calculo livros
+
+const largLivros = document.querySelector("#larguraLivros");
+const compLivros = document.querySelector("#comprimentoLivros");
+const areaLivros = document.querySelector(".areaLivros");
+const higProfunda9 = document.querySelector(".hig-profunda9");
+
+function calculaAreaEstante () {
+    areaLivros.value = largLivros.value * compLivros.value;
+    montaPacoteHigProfunda(areaLivros.value/2);
+}
+
+largLivros.addEventListener("change", (evento)=>{
+    calculaAreaEstante();
+})
+
+compLivros.addEventListener("change", (evento)=>{
+    calculaAreaEstante();
+})
+
+
 
 let verifica = false;
 

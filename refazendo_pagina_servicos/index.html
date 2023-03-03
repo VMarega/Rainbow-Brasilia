@@ -250,7 +250,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary adicionar" data-add-tapete>Adidcionar</button>
+                            <button type="button" class="btn btn-primary adicionar" data-bs-dismiss="modal">Adidcionar</button>
                         </div>
                     </div>
                 </div>
@@ -428,13 +428,13 @@
                                             <div class="bd-example mt-5 mb-5">
                                                 <form action="post">
                                                     <label class="d-block fs-5 m-3" for="larguraLivros">Largura</label>
-                                                    <input type="number" id="larguraLivros" placeholder="em m">
+                                                    <input type="number" name="larguraLivros" id="larguraLivros" placeholder="em m">
                                                     <label class="d-block fs-5 m-3" for="comprimentoLivros">Altura</label>
-                                                    <input type="number" id="comprimentoLivros" placeholder="em m">
+                                                    <input type="number" name="comprimentoLivros" id="comprimentoLivros" placeholder="em m">
                                                 </form>
                                                 <div class="area">
-                                                    <label for="" class="d-block fs-5 m-3">Área</label>
-                                                    <input type="number" class="areaLivros">
+                                                    <label for="areaLivros" class="d-block fs-5 m-3">Área</label>
+                                                    <input type="number" name="areaLivros" class="areaLivros" data-item-area2>
                                                 </div>
                                             </div>
                                         </div>
@@ -576,7 +576,6 @@
     </div>
     <script src="main.js"></script>
     <script src="pacoteDeHigProfunda.js"></script>
-    <script src="livros.js"></script>
 </body>
 
 </html>

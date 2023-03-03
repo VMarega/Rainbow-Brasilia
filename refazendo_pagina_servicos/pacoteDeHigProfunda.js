@@ -1,5 +1,6 @@
-const itemDoPacote = document.querySelectorAll("[data-item-pacote]")
-const itemAreaDoPacote = document.querySelectorAll("[data-item-area]");
+const itemDoPacote = document.querySelectorAll("[data-item-pacote]")//itens com value pré-definidos
+const itemAreaDoPacote = document.querySelectorAll("[data-item-area]"); //tapete e carpete
+const itemAreaDoPacote2 = document.querySelectorAll("[data-item-area2]"); //para a estante de livros
 let pacoteAtual=0;
 let pacote5itens = 200;
 let sextoItem = 40;
@@ -12,9 +13,15 @@ let pacoteFinal = 0;
 let precoDoPacote = 0;
 
 
+itemAreaDoPacote2.forEach((elemento)=>{
+    elemento.addEventListener("change", (evento)=>{
+        montaPacoteHigProfunda(evento.target.value / 2)
+        return pacoteAtual;
+    })
+})
+
 itemAreaDoPacote.forEach((elemento)=>{
     elemento.addEventListener("change", (evento)=>{
-        console.log('helo');
         montaPacoteHigProfunda(evento.target.value / 4)
         return pacoteAtual;
     })
