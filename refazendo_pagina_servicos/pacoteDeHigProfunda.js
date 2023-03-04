@@ -23,6 +23,7 @@ itemAreaDoPacote2.forEach((elemento)=>{
 itemAreaDoPacote.forEach((elemento)=>{
     elemento.addEventListener("change", (evento)=>{
         montaPacoteHigProfunda(evento.target.value / 4)
+        precoDoItem = evento.target.value * 30;
         return pacoteAtual;
     })
 })

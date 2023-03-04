@@ -1,4 +1,4 @@
-const tamanhoSofa = document.querySelectorAll("[data-pessoas-sentadas]");
+const tamanhoParaLavagem = document.querySelectorAll("[data-item-lavagem]");
 const adicionar = document.querySelectorAll(".adicionar");
 const higProfunda = document.querySelector(".hig-profunda");
 const higProfunda2 = document.querySelector(".hig-profunda2");
@@ -8,7 +8,10 @@ const higProfunda5 = document.querySelector(".hig-profunda5");
 const higProfunda6 = document.querySelector(".hig-profunda6");
 const higProfunda7 = document.querySelector(".hig-profunda7")
 const higProfunda8 = document.querySelector(".hig-profunda8");
-const lavagem = document.querySelector(".remocao-de-manchas");
+const sofaLavagem = document.querySelector("#lavacao");
+const camaLavagem = document.querySelector("#lavacao2");
+const tapeteLavagem = document.querySelector("#lavacao3");
+const carpeteLavagem = document.querySelector("#lavacao4");
 const preco = document.querySelector("[data-valor]");
 const formItem = document.querySelectorAll(".form-item");
 let precoDoItem = 0;
@@ -16,8 +19,10 @@ let valorLavagemSofa2Lugares = 175;
 let valorLavagemSofa3Lugares = 200;
 let valorLavagemSofa4Lugares = 225;
 let valorLavagemSofa5Lugares = 250;
+let valorLavagem6 = 275;
 const caract = document.querySelectorAll("[data-sofa-caract]")
 let acrescimoCaract = 0;
+let custoMetroQuadrado = 30;
 
 caract.forEach((elemento)=>{
     elemento.addEventListener("change", (evento)=>{
@@ -26,14 +31,13 @@ caract.forEach((elemento)=>{
     })
 })
 
-tamanhoSofa.forEach((elemento)=>{
+tamanhoParaLavagem.forEach((elemento)=>{
     elemento.addEventListener("change", (evento)=>{
         precoDoItem = 0;
         calculaPrecoDoItem(evento.target.value);
         return precoDoItem;
     })
 })
-
 
 
 function calculaPrecoDoItem(tamanho){
@@ -45,6 +49,8 @@ function calculaPrecoDoItem(tamanho){
         precoDoItem = precoDoItem + valorLavagemSofa4Lugares
     } else if (tamanho == 2.5) {
         precoDoItem = precoDoItem + valorLavagemSofa5Lugares
+    } else if (tamanho == 2.75){
+        precoDoItem = precoDoItem + valorLavagem6
     }
 }
 
@@ -59,6 +65,7 @@ const botaoTapete = document.querySelector("[data-add-tapete]");*/
 function calculaAreaDoTapete (){
     metragem.value = compTapete.value * largTapete.value;
     montaPacoteHigProfunda(metragem.value/4);
+    precoDoItem = metragem.value * custoMetroQuadrado;
 }
 
 largTapete.addEventListener("change", (evento)=>{
@@ -138,7 +145,7 @@ let verifica = false;
 
 adicionar.forEach((elemento)=>{
 elemento.addEventListener("click", evento=>{
-    if(lavagem.checked){
+    if(sofaLavagem.checked || camaLavagem.checked || tapeteLavagem.checked || carpeteLavagem.checked){
         preco.value = parseInt(preco.value) + precoDoItem + acrescimoCaract;
         formItem.forEach((elemento)=>{elemento.reset();})
         
