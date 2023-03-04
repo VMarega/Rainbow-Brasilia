@@ -1,4 +1,5 @@
 const tamanhoParaLavagem = document.querySelectorAll("[data-item-lavagem]");
+const quantidadePoltronaLavagem = document.querySelector("[data-item-lavagem3]");
 const adicionar = document.querySelectorAll(".adicionar");
 const higProfunda = document.querySelector(".hig-profunda");
 const higProfunda2 = document.querySelector(".hig-profunda2");
@@ -12,9 +13,14 @@ const sofaLavagem = document.querySelector("#lavacao");
 const camaLavagem = document.querySelector("#lavacao2");
 const tapeteLavagem = document.querySelector("#lavacao3");
 const carpeteLavagem = document.querySelector("#lavacao4");
+const carrinhoLavagem = document.querySelector("#lavacao5");
+const poltronaLavagem = document.querySelector("#lavacao6");
+const bercoLavagem = document.querySelector("#lavacao7")
 const preco = document.querySelector("[data-valor]");
 const formItem = document.querySelectorAll(".form-item");
 let precoDoItem = 0;
+let unitarioPoltrona = 80;
+let valorLavagem1 = 90;
 let valorLavagemSofa2Lugares = 175;
 let valorLavagemSofa3Lugares = 200;
 let valorLavagemSofa4Lugares = 225;
@@ -39,10 +45,16 @@ tamanhoParaLavagem.forEach((elemento)=>{
     })
 })
 
+quantidadePoltronaLavagem.addEventListener("change", ()=>{
+    precoDoItem = 0;
+    precoDoItem = quantidadePoltronaLavagem.value * unitarioPoltrona;
+})
 
 function calculaPrecoDoItem(tamanho){
     if(tamanho == 1){
         precoDoItem = precoDoItem + valorLavagemSofa2Lugares
+    } else if (tamanho == 1.1){
+        precoDoItem = precoDoItem + valorLavagem1
     } else if (tamanho == 1.5){
         precoDoItem = precoDoItem + valorLavagemSofa3Lugares
     } else if (tamanho == 2){
@@ -145,7 +157,7 @@ let verifica = false;
 
 adicionar.forEach((elemento)=>{
 elemento.addEventListener("click", evento=>{
-    if(sofaLavagem.checked || camaLavagem.checked || tapeteLavagem.checked || carpeteLavagem.checked){
+    if(sofaLavagem.checked || camaLavagem.checked || tapeteLavagem.checked || carpeteLavagem.checked || carrinhoLavagem.checked || poltronaLavagem.checked || bercoLavagem.checked){
         preco.value = parseInt(preco.value) + precoDoItem + acrescimoCaract;
         formItem.forEach((elemento)=>{elemento.reset();})
         
